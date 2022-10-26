@@ -1,7 +1,10 @@
+import { PostHeader } from "./components/PostHeader";
+import { PostContainer } from "./styles";
+
 export function Post() {
   return (
-    <div>
-      <h1>Post</h1>
-    </div>
+    <PostContainer>
+      <PostHeader />
+    </PostContainer>
   )
 }
