@@ -34,5 +34,9 @@ export const SearchInputContainer = styled.div`
       border-color: ${({ theme }) => theme.colors["brand-blue"]};
       outline: none;
     }
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors["base-label"]};
+    }
   }
 `
