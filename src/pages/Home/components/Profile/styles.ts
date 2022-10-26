@@ -10,3 +10,9 @@ export const ProfileContainer = styled.section`
   display: flex;
   gap: 2rem;
 `
+export const ProfilePicture = styled.img`
+  width: 9.25rem;
+  height: 9.25rem;
+  border-radius: 8px;
+  object-fit: cover;
+`
