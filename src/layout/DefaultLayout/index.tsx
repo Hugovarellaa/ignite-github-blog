@@ -6,7 +6,10 @@ export function DefaultLayout() {
   return (
     <DefaultLayoutContainer>
       <Header />
-      <Outlet />
+
+      <main>
+        <Outlet />
+      </main>
     </DefaultLayoutContainer>
   )
 }
