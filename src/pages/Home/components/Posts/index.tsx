@@ -1,4 +1,5 @@
 import { IPost } from "../..";
+import { RelativeDateFormatted } from "../../../../utils/formatter";
 import { PostsContainer } from "./styles";
 
 interface IPostProps {
@@ -6,11 +7,13 @@ interface IPostProps {
 }
 
 export function Posts({ post }: IPostProps) {
+  const formattedDate = RelativeDateFormatted(post.created_at)
+
   return (
     <PostsContainer to={`/post/${post.number}`}>
       <div>
         <strong>{post.title}</strong>
-        <time>{post.created_at}</time>
+        <time>{formattedDate}</time>
       </div>
 
       <p>
