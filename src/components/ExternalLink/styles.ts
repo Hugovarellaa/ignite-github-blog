@@ -19,4 +19,8 @@ export const ExternalLinkContainer = styled.a`
     width: 0.75rem;
     height: 0.75rem;
   }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors["brand-blue"]};
+  }
 `
