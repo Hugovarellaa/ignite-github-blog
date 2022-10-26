@@ -1,6 +1,6 @@
-import { IPost } from "../..";
-import { RelativeDateFormatted } from "../../../../utils/formatter";
-import { PostsContainer } from "./styles";
+import { IPost } from '../..'
+import { RelativeDateFormatted } from '../../../../utils/formatter'
+import { PostsContainer } from './styles'
 
 interface IPostProps {
   post: IPost
@@ -16,10 +16,7 @@ export function Posts({ post }: IPostProps) {
         <time>{formattedDate}</time>
       </div>
 
-      <p>
-        {post.body}
-      </p>
-
+      <p>{post.body}</p>
     </PostsContainer>
   )
 }

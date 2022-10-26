@@ -1,23 +1,21 @@
-import { useCallback, useEffect, useState } from "react";
-import { Loading } from "../../components/Loading";
-import { api } from "../../services/axios";
-import { Posts } from "./components/Posts";
-import { Profile } from "./components/Profile";
-import { SearchInput } from "./components/SearchInput";
-import { HomeContainer } from "./styles";
+import { useCallback, useEffect, useState } from 'react'
+import { Loading } from '../../components/Loading'
+import { api } from '../../services/axios'
+import { Posts } from './components/Posts'
+import { Profile } from './components/Profile'
+import { SearchInput } from './components/SearchInput'
+import { HomeContainer } from './styles'
 
-
-const username = import.meta.env.VITE_GITHUB_USERNAME;
-const repoName = import.meta.env.VITE_GITHUB_REPONAME;
-
+const username = import.meta.env.VITE_GITHUB_USERNAME
+const repoName = import.meta.env.VITE_GITHUB_REPONAME
 
 export interface IPost {
   title: string
-  body: string;
+  body: string
   created_at: string
-  number: number;
+  number: number
   html_url: string
-  comments: number;
+  comments: number
   user: {
     login: string
   }
@@ -28,19 +26,19 @@ export function Home() {
   const [isLoading, setIsLoading] = useState(true)
 
   const getPosts = useCallback(
-    async (query: string = "") => {
+    async (query: string = '') => {
       try {
         setIsLoading(true)
         const response = await api.get(
-          `/search/issues?q=${query}%20label:published%20repo:${username}/${repoName}`
-        );
-        setPosts(response.data.items);
+          `/search/issues?q=${query}%20label:published%20repo:${username}/${repoName}`,
+        )
+        setPosts(response.data.items)
       } finally {
         setIsLoading(false)
       }
     },
-    [posts]
-  );
+    [posts],
+  )
 
   useEffect(() => {
     getPosts()
@@ -51,19 +49,15 @@ export function Home() {
       <Profile />
       <SearchInput getPosts={getPosts} postsLength={posts.length} />
 
-      {
-        isLoading ? (
-          <Loading />
-        ) : (
-          <HomeContainer>
-            {
-              posts.map((post: IPost) => (
-                <Posts key={post.number} post={post} />
-              ))
-            }
-          </HomeContainer>
-        )
-      }
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <HomeContainer>
+          {posts.map((post: IPost) => (
+            <Posts key={post.number} post={post} />
+          ))}
+        </HomeContainer>
+      )}
     </>
   )
 }

@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom"
-import styled from "styled-components"
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 export const PostsContainer = styled(Link)`
   width: 100%;
   height: 16.25rem;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors["base-post"]};
-  border: 1px solid ${({ theme }) => theme.colors["base-post"]};
+  background-color: ${({ theme }) => theme.colors['base-post']};
+  border: 1px solid ${({ theme }) => theme.colors['base-post']};
   padding: 2rem;
   transition: 0.4s;
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors["base-label"]};
+    border-color: ${({ theme }) => theme.colors['base-label']};
   }
 
   div {
@@ -21,8 +21,8 @@ export const PostsContainer = styled(Link)`
 
     strong {
       flex: 1;
-      font-size: ${({ theme }) => theme.textSizes["title-title-m"]};
-      color: ${({ theme }) => theme.colors["base-title"]};
+      font-size: ${({ theme }) => theme.textSizes['title-title-m']};
+      color: ${({ theme }) => theme.colors['base-title']};
 
       overflow: hidden;
       text-overflow: ellipsis;
@@ -33,8 +33,8 @@ export const PostsContainer = styled(Link)`
 
     time {
       width: max-content;
-      font-size: ${({ theme }) => theme.textSizes["text-text-s"]};
-      color: ${({ theme }) => theme.colors["base-span"]};
+      font-size: ${({ theme }) => theme.textSizes['text-text-s']};
+      color: ${({ theme }) => theme.colors['base-span']};
     }
   }
 

@@ -1,7 +1,7 @@
 // Spinning retirado desse site
 // https://tobiasahlin.com/spinkit/
 
-import { LoadingContainer } from "./styles";
+import { LoadingContainer } from './styles'
 
 export function Loading() {
   return (

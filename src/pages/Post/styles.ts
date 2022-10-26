@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const PostContainer = styled.section`
   width: 100%;
   min-height: 10.5rem;
   margin-top: calc(0px - 5.5rem);
-  background-color: ${({ theme }) => theme.colors["base-profile"]};
+  background-color: ${({ theme }) => theme.colors['base-profile']};
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 2rem;
@@ -20,8 +20,8 @@ export const PostContainer = styled.section`
   }
 
   h1 {
-    font-size: ${({ theme }) => theme.textSizes["title-title-l"]};
-    color: ${({ theme }) => theme.colors["base-title"]};
+    font-size: ${({ theme }) => theme.textSizes['title-title-l']};
+    color: ${({ theme }) => theme.colors['base-title']};
     line-height: 130%;
     margin-bottom: 0.5rem;
   }
@@ -38,10 +38,10 @@ export const PostContainer = styled.section`
       gap: 0.5rem;
       line-height: 0px;
 
-      color: ${({ theme }) => theme.colors["base-span"]};
+      color: ${({ theme }) => theme.colors['base-span']};
 
       svg {
-        color: ${({ theme }) => theme.colors["base-label"]};
+        color: ${({ theme }) => theme.colors['base-label']};
       }
     }
   }
