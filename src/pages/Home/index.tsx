@@ -33,7 +33,6 @@ export function Home() {
         const response = await api.get(
           `/search/issues?q=${query}%20label:published%20repo:${username}/${repoName}`
         );
-        console.log(response.data)
         setPosts(response.data.items);
       } finally {
         setIsLoading(false)
@@ -49,7 +48,7 @@ export function Home() {
   return (
     <>
       <Profile />
-      <SearchInput />
+      <SearchInput getPosts={getPosts} />
 
       <HomeContainer>
         {
