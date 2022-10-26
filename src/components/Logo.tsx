@@ -1,4 +1,3 @@
-
 export function Logo() {
   return (
     <svg
@@ -29,5 +28,5 @@ export function Logo() {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

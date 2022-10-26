@@ -1,5 +1,5 @@
-import { Logo } from "../Logo";
-import { HeaderContainer } from "./styles";
+import { Logo } from '../Logo'
+import { HeaderContainer } from './styles'
 
 export function Header() {
   return (

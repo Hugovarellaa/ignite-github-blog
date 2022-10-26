@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const ProfileContainer = styled.section`
   width: 100%;
   min-height: 13.25rem;
   margin-top: calc(0px - 5.5rem);
-  background-color: ${({ theme }) => theme.colors["base-profile"]};
+  background-color: ${({ theme }) => theme.colors['base-profile']};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 2rem 2.5rem;
@@ -29,8 +29,8 @@ export const ProfileDetails = styled.div`
     margin-bottom: 0.5rem;
 
     h1 {
-      font-size: ${({ theme }) => theme.textSizes["title-title-l"]};
-      color: ${({ theme }) => theme.colors["base-title"]};
+      font-size: ${({ theme }) => theme.textSizes['title-title-l']};
+      color: ${({ theme }) => theme.colors['base-title']};
       line-height: 130%;
     }
   }
@@ -50,7 +50,7 @@ export const ProfileDetails = styled.div`
       svg {
         width: 1.125rem;
         height: 1.125rem;
-        color: ${({ theme }) => theme.colors["base-label"]};
+        color: ${({ theme }) => theme.colors['base-label']};
       }
     }
   }
