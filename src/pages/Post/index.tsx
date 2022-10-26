@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { api } from '../../services/axios'
@@ -7,8 +8,6 @@ import { PostContainer } from './styles'
 
 const username = import.meta.env.VITE_GITHUB_USERNAME
 const repoName = import.meta.env.VITE_GITHUB_REPONAME
-
-const id = ''
 
 export function Post() {
   const [postData, setPostData] = useState({} as IPost)
@@ -27,15 +26,15 @@ export function Post() {
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [id])
 
   useEffect(() => {
     getPostDetails()
-  }, [postData])
+  }, [])
 
   return (
     <PostContainer>
-      <PostHeader />
+      <PostHeader postData={postData} isLoading={isLoading} />
     </PostContainer>
   )
 }
