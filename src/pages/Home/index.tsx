@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Loading } from "../../components/Loading";
 import { api } from "../../services/axios";
 import { Posts } from "./components/Posts";
 import { Profile } from "./components/Profile";
@@ -50,13 +51,19 @@ export function Home() {
       <Profile />
       <SearchInput getPosts={getPosts} postsLength={posts.length} />
 
-      <HomeContainer>
-        {
-          posts.map((post: IPost) => (
-            <Posts key={post.number} post={post} />
-          ))
-        }
-      </HomeContainer>
+      {
+        isLoading ? (
+          <Loading />
+        ) : (
+          <HomeContainer>
+            {
+              posts.map((post: IPost) => (
+                <Posts key={post.number} post={post} />
+              ))
+            }
+          </HomeContainer>
+        )
+      }
     </>
   )
 }
