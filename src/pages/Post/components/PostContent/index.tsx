@@ -1,5 +1,13 @@
-import { PostContentContainer } from './styles'
+import { PostContentContainer } from './styles';
 
-export function PostContent() {
-  return <PostContentContainer></PostContentContainer>
+interface IPostContentProps {
+  content: string;
+}
+
+export function PostContent({ content }: IPostContentProps) {
+  return (
+    <PostContentContainer>
+      {content}
+    </PostContentContainer>
+  )
 }
