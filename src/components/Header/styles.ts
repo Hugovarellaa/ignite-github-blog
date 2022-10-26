@@ -8,4 +8,9 @@ export const HeaderContainer = styled.div`
   background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-bottom: 5rem;
+  }
 `
