@@ -31,10 +31,12 @@ export function Profile() {
     } finally {
       setIsLoading(false)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [profileData])
 
   useEffect(() => {
     getProfileData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
