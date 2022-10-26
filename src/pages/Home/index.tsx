@@ -48,7 +48,7 @@ export function Home() {
   return (
     <>
       <Profile />
-      <SearchInput getPosts={getPosts} />
+      <SearchInput getPosts={getPosts} postsLength={posts.length} />
 
       <HomeContainer>
         {
